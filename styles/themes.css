@@ -4,3 +4,70 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+:root.theme-light {
+  --weight-text: 400;
+  --weight-title: 700;
+
+  --themes-background: #fff;
+  --themes-main-color: #000;
+  --bg-gradient:
+    repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+  --themes-heart-color: #000;
+}
+
+:root.theme-dark {
+  --weight-text: 465;
+  --weight-title: 785;
+
+  --themes-background: #000;
+  --themes-main-color: #00CC14;
+  --bg-gradient:
+    repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+  --themes-heart-color: #00CC14;
+}
+
+.theme-dark .button__text {
+    color: var(--themes-main-color);
+    mix-blend-mode: difference;
+}
+
+.theme-dark .pop-up__icon {
+  color: var(--themes-main-color);
+}
+
+.theme-light .button__text {
+  color: var(--themes-background);
+  mix-blend-mode: difference;
+}
+
+.theme-light .save-button {
+  color: var(--themes-background);
+}
+
+.theme-light .pop-up__icon {
+  color: var(--themes-main-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --weight-text: 465;
+    --weight-title: 785; 
+
+    --themes-background: #000;
+    --themes-main-color: #00CC14;
+    --bg-gradient:
+      repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #007f0c 0.01%, #004306 100%);
+    --themes-heart-color: #00CC14; 
+  }
+
+  .button__text {
+    color: var(--themes-main-color);
+    mix-blend-mode: difference;
+  }
+}
