@@ -72,6 +72,7 @@
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -107,6 +108,7 @@
 .theme-menu__button:focus-visible {
   outline: none;
   opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:after {
@@ -116,6 +118,7 @@
   height: 2px;
   margin-top: 1px;
   background-color: var(--themes-main-color);
+  transition: width 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -243,10 +246,6 @@
   padding: 0;
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .card__icon-button:focus {
   outline: none;
 }
@@ -254,54 +253,6 @@
 .card__icon-button:focus-visible {
   outline: 2px solid var(--themes-main-color);
   outline-offset: -2px;
-}
-
-.core {
-  fill: transparent;
-}
-
-.card__icon-button:hover .core {
-  fill: var(--themes-heart-color);
-}
-
-.main-body {
-  fill: transparent;
-}
-
-.card__icon-button:hover .main-body {
-  fill: var(--themes-heart-color);
-}
-
-.card__icon-button:active .core {
-  fill: var(--heart-red-color);
-}
-
-.card__icon-button:active .main-body {
-  fill: var(--heart-red-color);
-}
-
-.contour {
-  fill: var(--themes-heart-color);
-}
-
-.is-liked .core {
-  fill: var(--heart-red-color);
-}
-
-.is-liked .main-body {
-  fill: var(--heart-red-color);
-}
-
-.is-liked .contour {
-  fill: var(--heart-red-color);
-}
-
-.card__icon-button:hover .is-liked .core {
-  fill: var(--heart-red-color);
-}
-
-.card__icon-button:hover .is-liked .main-body {
-  fill: var(--heart-red-color);
 }
 
 .card__like-button {
@@ -331,6 +282,7 @@
 .card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
   outline: none;
+  transition: box-shadow 0.6s ease;
 }
 
 .card__like-button::after {
@@ -341,6 +293,7 @@
   display: block;
   background-color: var(--themes-main-color);
   inline-size: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .card__like-button:hover::after {
@@ -366,6 +319,7 @@
 .save-button:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
   outline: none;
+  transition: box-shadow 0.6s ease;
 }
 
 .save-button::after {
@@ -375,6 +329,7 @@
   display: block;
   background-color: var(--themes-main-color);
   inline-size: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .save-button:hover::after {
@@ -446,6 +401,7 @@
 .pop-up__button:focus-visible {
   box-shadow: 2px 2px 0 var(--themes-main-color);
   outline: none;
+  transition: box-shadow 0.6s ease;
 }
 
 .pop-up__button::after {
@@ -456,6 +412,7 @@
   display: block;
   background-color: var(--themes-main-color);
   inline-size: 0;
+  transition: 0.5s ease-in-out;
 }
 
 .pop-up__button:hover::after {
